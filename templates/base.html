@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django AnonymousUser - {% block title %}{% endblock title %}</title>
+</head>
+<body>
+
+    <h1>Current <code>User</code>: <code>{{ user }}</code></h1>
+
+    <h2>User Information</h2>
+    <dl>
+        <dt><code>user.is_anonymous</code></dt>
+        <dd>{{ user.is_anonymous }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt><code>user</code></dt>
+        <dd>{{ user }}</dd>
+        <dt><code>user.username</code></dt>
+        <dd>{{ user.username }}</dd>
+    </dl>
+    
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>

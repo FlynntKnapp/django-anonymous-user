@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+    <h2><code>user</code> Login Status</h2>
+    {% if user.is_authenticated %}
+        <p>You are logged in, and you're: <code>{{ user }}</code></p>
+        {% if user.is_superuser %}
+            <a href="{% url 'admin:index' %}">Django Admin Interface</a>
+        {% endif %}
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+        <p>You are not logged in, so you're: <code>{{ user }}</code></p>
+        <p><a href={% url 'login' %}>Log In</a></p>
+    {% endif %}
+
+{% endblock content %}
