@@ -5,4 +5,3 @@
 ## Tutorial to create this project
 
 ## External Resources
-# django-anonymous-user
